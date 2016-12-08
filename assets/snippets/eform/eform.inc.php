@@ -352,7 +352,7 @@ function eForm($modx,$params) {
 							break;
 						case "file":
 							// set file name
-							if($value['type']!="" && $value['error']==0){
+							if(isset($value['type']) && $value['type']!="" && $value['error']==0){
 								$value = $value["name"];
 								$patharray = explode(((strpos($value,"/")===false)? "\\":"/"), $value);
 								$value = $patharray[count($patharray)-1];
